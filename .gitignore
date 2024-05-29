@@ -138,3 +138,8 @@ __pycache__/
 .vscode
 **/.vscode
 .azure
+.terraform
+test-results/
+playwright-report/
+playwright/.cache/
+.env.playwright.local
