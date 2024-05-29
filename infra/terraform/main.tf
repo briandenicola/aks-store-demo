@@ -2,17 +2,17 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.80.0"
+      version = "=3.101.0"
     }
 
     local = {
       source  = "hashicorp/local"
-      version = "=2.4.0"
+      version = "=2.5.1"
     }
 
     random = {
       source  = "hashicorp/random"
-      version = "=3.5.1"
+      version = "=3.6.1"
     }
   }
 }
@@ -54,6 +54,6 @@ data "azurerm_subscription" "current" {}
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "example" {
-  name     = "rg-${local.name}"
+  name     = "rg-${var.resource_group_name_suffix}"
   location = local.location
 }
